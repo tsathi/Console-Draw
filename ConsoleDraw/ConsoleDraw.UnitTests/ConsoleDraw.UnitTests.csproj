@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Validators\" />
+    <None Remove="xunit" />
+    <None Remove="FluentValidation" />
+    <None Remove="FluentAssertions" />
+    <None Remove="xunit.runner.visualstudio" />
+    <None Remove="Microsoft.NET.Test.Sdk" />
+    <None Remove="Commands\" />
+    <None Remove="Moq" />
+    <None Remove="Domain\" />
+    <None Remove="Drawers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validators\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Drawers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="FluentAssertions" Version="6.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleDraw\ConsoleDraw.csproj" />
+  </ItemGroup>
+</Project>
